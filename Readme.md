@@ -45,7 +45,22 @@ The architecture takes an RGB image and passes it through two 32 features convol
 
 ## Experimental Results
 
-We train our network with 253,126 20 times 20, landsat 7 RGB images, corresponding to 2010, in neighborhoods of 600 times 600 meters. We employ 50% of them for the training process and 50% for the testing stage. With the former, we create to subsets, one of them containing 75% of the elements to train the network and 25% to validate it. We train the network during 30 epochs employing a learning rate of 1e-6 and obtain a mean square error of 0.004.  
+We train our network with 253,126 20 times 20, landsat 7 RGB images, corresponding to 2010, in neighborhoods of 600 times 600 meters. We employ 50% of them for the training process and 50% for the testing stage. With the former, we create to subsets, one of them containing 75% of the elements to train the network and 25% to validate it. We train the network during 30 epochs employing a learning rate of 1e-6 and obtain a mean square error of 0.004. 
+
+## Contributors
+Some of the members of the team   include
+
+
++ Elio Atenogenes
++ Joel Barbosa
++ Octavio Icasio
++ Joaquin Salas
++ Pablo Vera
++ Marivel Zoe
+
+
+
+
 
 
 
