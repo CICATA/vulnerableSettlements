@@ -38,15 +38,26 @@ We start with nation-wise block-level aggregated information about the following
 
 Roy et al. (2019) propose to use the first principal component and the data projection on it as the vulnerability value. We have found it to be too sensitivy to extreme values. Therefore, we propose to define well-being by the projection of vector p = [p_1, ..., p_5]/sqrt(5) with vector [1,1,1,1,1]/sqrt(5), as we illustrate in the following figure:
 
-![Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
-features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/vulnerabilityProjectionSmall.png)
+ 
+
+
+![](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/vulnerabilityProjectionSmall.png)
+
+.center[Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
+features to having none.]
+
 
 
 ## Learning Vulnerability
 
 We train a deep learning regressor using a convolutional neural network, which architecture we deploy in the following figure:
 
-![Deep Learning. We employ a CNN to learn to map between images and vulnerability values.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNNsmall.png)
+
+![](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNNsmall.png)
+
+.center[Deep Learning. We employ a CNN to learn to map between images and vulnerability values.]
+
+ 
  
 The architecture takes an RGB image and passes it through two 32 features convolutional layers, each one followed by a ReLU activation function. After the second convolutional layer, we place a max-pooling layer. Afterward, we employ another two convolutional layers, this time with 64 features, each one followed by their corresponding ReLU activation function. Then, we connect the output to a full-connected layer which is followed by a single regression neuron, without activation function. 
 
