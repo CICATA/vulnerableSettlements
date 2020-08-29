@@ -2,7 +2,7 @@
 
 One of the challenges in the fight against poverty is the precise localization and assessment of the  sprawl of vulnerable communities. This is traditionally accomplished using nation-wide census exercises, a burdensome process that  requires field visits by trained personnel. Unfortunately, censuses are conducted only sporadically (e.g., every ten years in Mexico), which makes it difficult or impossible to track the short-term effect of policies to fight poverty. In practice, poverty assessment is  carried out through extrapolations, sampling,  indirect indicators, and lately using satellite images. In this research, we propose to build a system that maps  images from  satellite surveys with data captured in the field by means of machine learning schemes. Given images of the area of interest, the system extracts features related to well-being of the communities considered. This strategy permits a quick assessment of the degree of vulnerability of new or changing community sprawls, providing quantitative information that can be used to evaluate the effect of governmental policies and socio-economical factors.
 
-[Vulnerable Settlements in Mexico. You can see a live demo of this map at (requires Earth Engine permission) https://code.earthengine.google.com/9350aac99d8a6aa99c1fdce7e740d82a?hideCode=true](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/mexicoMap.jpg)
+![Vulnerable Settlements in Mexico. You can see a live demo of this map at (requires Earth Engine permission) https://code.earthengine.google.com/9350aac99d8a6aa99c1fdce7e740d82a?hideCode=true](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/mexicoMap.jpg)
 
 ## Background
 
@@ -30,7 +30,7 @@ We start with nation-wise block-level aggregated information about the following
 
 Roy et al. (2019) propose to use the first principal component and the data projection on it as the vulnerability value. We have found it to be too sensitivy to extreme values. Therefore, we propose to define well-being by the projection of vector p = [p_1, ..., p_5]/sqrt(5) with vector [1,1,1,1,1]/sqrt(5), as we illustrate in the following figure:
 
-[Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
+![Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
 features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/vulnerabilityProjection.jpg)
 
 
@@ -38,8 +38,7 @@ features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/
 
 We train a deep learning regressor using a convolutional neural network, which architecture we deploy in the following figure:
 
-[Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
-features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNN.png)
+![Deep Learning. We employ a CNN to learn to map between images and vulnerability values.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNN.png)
 
 The architecture takes an RGB image and passes it through two 32 features convolutional layers, each one followed by a ReLU activation function. After the second convolutional layer, we place a max-pooling layer. Afterward, we employ another two convolutional layers, this time with 64 features, each one followed by their corresponding ReLU activation function. Then, we connect the output to a full-connected layer which is followed by a single regression neuron, without activation function. 
 
