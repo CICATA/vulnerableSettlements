@@ -39,7 +39,7 @@ features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/
 We train a deep learning regressor using a convolutional neural network, which architecture we deploy in the following figure:
 
 [Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
-features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNN.jpg)
+features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNN.png)
 
 The architecture takes an RGB image and passes it through two 32 features convolutional layers, each one followed by a ReLU activation function. After the second convolutional layer, we place a max-pooling layer. Afterward, we employ another two convolutional layers, this time with 64 features, each one followed by their corresponding ReLU activation function. Then, we connect the output to a full-connected layer which is followed by a single regression neuron, without activation function. 
 
