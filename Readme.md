@@ -60,7 +60,7 @@ Some of the members of the team   include
 
 ## Acknowledgements
 This work was made possible thanks to a generous grant from GEO-GEE. Also, we receive support from SIP-IPN 20201357
- on beahalf of Joaquin Salas. Thanks too to our institutions INEGI and IPN for providing a nourishing environment.
+ on beahalf of Joaquin Salas. Thanks too to our institutions INEGI, CENAM and IPN for providing a nourishing environment.
  
 
 
