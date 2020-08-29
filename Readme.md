@@ -5,7 +5,7 @@ One of the challenges in the fight against poverty is the precise localization a
 
 ![](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/mexicoMap.jpg)
 
- Vulnerable Settlements in Mexico. You can see a live demo of this map at (requires Earth Engine permission) https://code.earthengine.google.com/9350aac99d8a6aa99c1fdce7e740d82a?hideCode=true
+ Vulnerable Settlements in Mexico. You can see a live demo of this map at (requires Earth Engine permission and may take a few seconds to run) https://code.earthengine.google.com/9350aac99d8a6aa99c1fdce7e740d82a?hideCode=true
  
 
 
@@ -40,12 +40,12 @@ We start with nation-wise block-level aggregated information about the following
 Roy et al. (2019) propose to use the first principal component and the data projection on it as the vulnerability value. We have found it to be too sensitivy to extreme values. Therefore, we propose to define well-being by the projection of vector p = [p_1, ..., p_5]/sqrt(5) with vector [1,1,1,1,1]/sqrt(5), as we illustrate in the following figure:
 
  
-
-
 ![](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/vulnerabilityProjectionSmall.png)
 
-.center[Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
-features to having none.]
+Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
+features to having none.
+
+ 
 
 
 
@@ -56,7 +56,9 @@ We train a deep learning regressor using a convolutional neural network, which a
 
 ![](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNNsmall.png)
 
-.center[Deep Learning. We employ a CNN to learn to map between images and vulnerability values.]
+Deep Learning. We employ a CNN to learn to map between images and vulnerability values.
+
+ 
 
  
  
