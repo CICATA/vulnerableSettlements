@@ -39,7 +39,7 @@ features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/
 We train a deep learning regressor using a convolutional neural network, which architecture we deploy in the following figure:
 
 ![Deep Learning. We employ a CNN to learn to map between images and vulnerability values.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNNsmall.png)
-
+ 
 The architecture takes an RGB image and passes it through two 32 features convolutional layers, each one followed by a ReLU activation function. After the second convolutional layer, we place a max-pooling layer. Afterward, we employ another two convolutional layers, this time with 64 features, each one followed by their corresponding ReLU activation function. Then, we connect the output to a full-connected layer which is followed by a single regression neuron, without activation function. 
 
 ## Experimental Results
