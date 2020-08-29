@@ -34,6 +34,24 @@ Roy et al. (2019) propose to use the first principal component and the data proj
 features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/vulnerabilityProjection.jpg)
 
 
+## Learning Vulnerability
+
+We train a deep learning regressor using a convolutional neural network, which architecture we deploy in the following figure:
+
+[Vulnerability Assessment. We project the vector containing the measurements with a vector describing having all the 
+features to having none.](https://github.com/joaquinsalas/vulnerableSettlements/blob/master/figures/CNN.jpg)
+
+The architecture takes an RGB image and passes it through two 32 features convolutional layers, each one followed by a ReLU activation function. After the second convolutional layer, we place a max-pooling layer. Afterward, we employ another two convolutional layers, this time with 64 features, each one followed by their corresponding ReLU activation function. Then, we connect the output to a full-connected layer which is followed by a single regression neuron, without activation function. 
+
+## Experimental Results
+
+We train our network with 253,126 20 times 20, landsat 7 RGB images, corresponding to 2010, in neighborhoods of 600 times 600 meters. We employ 50% of them for the training process and 50% for the testing stage. With the former, we create to subsets, one of them containing 75% of the elements to train the network and 25% to validate it. We train the network during 30 epochs employing a learning rate of 1e-6 and obtain a mean square error of 0.004.  
+
+
+
+
+
+
 
 
 
